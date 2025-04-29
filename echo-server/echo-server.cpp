@@ -25,10 +25,8 @@ void usage() {
 #include "../version.txt"
    );
 	printf("\n");
-	printf("syntax: ts <port> [-e] [-b] [-si <src ip>]\n");
-	printf("  -e : echo\n");
-	printf("  -b : broadcast\n");
-	printf("sample: ts 1234\n");
+	printf("syntax : echo-server <port> [-e[-b]]\n");
+	printf("sample : echo-server 1234 -e -b\n");
 }
 
 struct Param {

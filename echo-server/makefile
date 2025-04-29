@@ -1,4 +1,4 @@
-TARGET=../bin/ts
+TARGET=../bin/echo-server
 CPPFLAGS+=-Wall -O2
 ifdef ANDROID_NDK_ROOT
 LDFLAGS+=-static-libstdc++
@@ -8,7 +8,7 @@ LDLIBS+=-pthread
 
 all: $(TARGET)
 
-$(TARGET): ts.o
+$(TARGET): echo-server.o
 	$(LINK.cpp) $^ $(LOADLIBES) $(LDLIBS) -o $@
 ifdef ANDROID_NDK_ROOT
 	termux-elf-cleaner --api-level 23 $(TARGET)
